@@ -2,219 +2,224 @@
 <html lang="nl">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Veldverkenner – Bloemenveld Frankendael</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Veldverkenner – Bloemenveld Frankendael</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
 
-<div class="app">
+    <div class="app">
 
-<!-- ===== SCHERM 1: KAART ===== -->
-<main class="kaart" id="kaart">
-<div class="kaart-binnen">
-<div class="kaart-draai">
-<img src="assets/bloemenveld.jpg" alt="Kaart van het bloemenveld">
-
-<!-- Eén knop naar de planten. Verplaats hem met --x en --y (in % van de liggende kaart) -->
-<a class="zone-knop" href="#collectie" style="--x:17%; --y:47%;">
-<span>6 planten</span>
-</a>
-</div>
-</div>
-</main>
+        <!-- ===== SCHERM 1: KAART ===== -->
+            <div class="kaart-binnen">
+                <div class="kaart-draai">
+                    <img src="assets/bloemenveld.jpg" alt="Kaart van het bloemenveld">
+                </div>
+            </div>
 
 
-<!-- ===== SCHERM 2: COLLECTIE ===== -->
-<main class="collectie-pagina" id="collectie">
+        <!-- ===== SCHERM 2: COLLECTIE ===== -->
+        <main class="collectie-pagina" id="collectie">
 
-<a href="#kaart" class="terug">← Terug naar de kaart</a>
+            <a href="#kaart" class="terug">← Terug naar de kaart</a>
 
-<h1>Plantencollectie</h1>
-<p class="intro">Alle planten die je in het bloemenveld kunt tegenkomen.</p>
-
-<!-- De 6 planten van de knop op de kaart -->
-<h2>In deze zone</h2>
-
-<div class="kaartjes-grid">
-
-<article class="kaartje">
-<img src="assets/images-1.jpeg" alt="Witte dovenetel">
-<h3>Witte Dovenetel</h3>
-<p class="latijn">Lamium album</p>
-<p>Lijkt op brandnetel maar "gaatjes" in de bloem.</p>
-</article>
-
-<article class="kaartje">
-<img src="assets/images.jpeg" alt="Duizendblad">
-<h3>Duizendblad</h3>
-<p class="latijn">Achillea millefolium</p>
-<p>Witte schermen die zweefvliegen en sluipwespen aantrekken.</p>
-</article>
-
-<article class="kaartje">
-<img src="assets/Grote_Teunisbloem_closeup.jpg" alt="Teunisbloem">
-<h3>Teunisbloem</h3>
-<p class="latijn">Oenothera biennis</p>
-<p>Gaat 's avonds open en wordt bestoven door nachtvlinders.</p>
-</article>
-
-<article class="kaartje">
-<img src="assets/images-2.jpeg" alt="Wilde marjolein">
-<h3>Wilde Marjolein</h3>
-<p class="latijn">Origanum vulgare</p>
-<p>Geurige roze bloempjes; een topplant voor vlinders en bijen.</p>
-</article>
-
-<article class="kaartje">
-<img src="assets/.jpg" alt="Kaarde">
-<h3>Kaarde</h3>
-<p class="latijn">Dipsacus fullonum</p>
-<p>Stekelige bloemhoofden; putters eten in de winter de zaden.</p>
-</article>
-
-<article class="kaartje">
-<img src="assets/.jpg" alt="Goede salie">
-<h3>Goede Salie</h3>
-<p class="latijn">Salvia officinalis</p>
-<p>Paarse lipbloemen waar hommels in kruipen.</p>
-</article>
-
-</div>
-
-<!-- Alle planten -->
-<h2>Alle planten</h2>
-
-<div class="kaartjes-grid">
-
-<article class="kaartje">
-<img src="img/Grote_Teunisbloem.jpg" alt="Teunisbloem">
-<h3>Teunisbloem</h3>
-<p class="latijn">Oenothera biennis</p>
-<p>Ecologische rol: Insecten die in de stengels schuilen dienen als voedselbron voor vogels.</p>
-</article>
-
-<article class="kaartje">
-<img src="img/duizendblad.jpg" alt="Duizendblad">
-<h3>Duizendblad</h3>
-<p class="latijn">Achillea millefolium</p>
-<p>Ecologische rol: Trekt bijen en vlinders en andere bestuivers aan. Goed voor graslanden en biodiversiteit.</p>
-</article>
-
-<article class="kaartje">
-<img src="img/zuurbes.jpg" alt="Zuurbes">
-<h3>Zuurbes</h3>
-<p class="latijn">Berberis vulgaris</p>
-<p>Ecologische rol: Bessen zijn een belangrijke voedselbron voor vogels.</p>
-</article>
-
-<article class="kaartje">
-<img src="img/bijvoet.jpg" alt="Bijvoet">
-<h3>Bijvoet</h3>
-<p class="latijn">Artemisia vulgaris</p>
-<p>Ecologische rol: Voedselplant voor larven van veel vlindersoorten.</p>
-</article>
-
-<article class="kaartje">
-<img src="img/colakruid.jpg" alt="Colakruid">
-<h3>Colakruid</h3>
-<p class="latijn">Artemisia abrotanum</p>
-<p>.</p>
-</article>
-
-<article class="kaartje">
-<img src="img/kaarde.jpg" alt="Kaarde">
-<h3>Kaarde</h3>
-<p class="latijn">Dipsacus fullonum</p>
-<p>.</p>
-</article>
-
-<article class="kaartje">
-<img src="img/stinkende-gouwe.jpg" alt="Stinkende gouwe">
-<h3>Stinkende Gouwe</h3>
-<p class="latijn">Chelidonium majus</p>
-<p>.</p>
-</article>
-
-<article class="kaartje">
-<img src="img/valeriaan.jpg" alt="Valeriaan">
-<h3>Valeriaan</h3>
-<p class="latijn">Valeriana officinalis</p>
-<p>.</p>
-</article>
-
-<article class="kaartje">
-<img src="img/witte-dovenetel.jpg" alt="Witte dovenetel">
-<h3>Witte Dovenetel</h3>
-<p class="latijn">Lamium album</p>
-<p>.</p>
-</article>
-
-<article class="kaartje">
-<img src="img/wilde-marjolein.jpg" alt="Wilde marjolein">
-<h3>Wilde Marjolein</h3>
-<p class="latijn">Origanum vulgare</p>
-<p>.</p>
-</article>
-
-<article class="kaartje">
-<img src="img/citroenmelisse.jpg" alt="Citroenmelisse">
-<h3>Citroenmelisse</h3>
-<p class="latijn">Melissa officinalis</p>
-<p>.</p>
-</article>
-
-<article class="kaartje">
-<img src="img/moerasspirea.jpg" alt="Moerasspirea">
-<h3>Moerasspirea</h3>
-<p class="latijn">Filipendula ulmaria</p>
-<p>.</p>
-</article>
-
-<article class="kaartje">
-<img src="img/goede-salie.jpg" alt="Goede salie">
-<h3>Goede Salie</h3>
-<p class="latijn">Salvia officinalis</p>
-<p>.</p>
-</article>
-
-<article class="kaartje">
-<img src="img/groot-kaasjeskruid.jpg" alt="Groot kaasjeskruid">
-<h3>Groot Kaasjeskruid</h3>
-<p class="latijn">Malva sylvestris</p>
-<p>.</p>
-</article>
-
-</div>
-
-</main>
+            <h1>Plantencollectie</h1>
+            <p class="intro">Alle planten die je in het bloemenveld kunt tegenkomen.</p>
 
 
-<!-- ===== NAVIGATIE ===== -->
-<nav class="bottom-nav">
-<a href="home.html">
-<span><svg viewBox="0 0 24 24"><path d="M3 11 12 3l9 8v10h-6v-6H9v6H3z"/></svg></span>
-<p>Home</p>
-</a>
-<a href="#kaart" class="nav-kaart">
-<span><svg viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15M15 6v15"/></svg></span>
-<p>Veldverkenner</p>
-</a>
-<a href="nieuws.html">
-<span><svg viewBox="0 0 24 24"><path d="M4 4h13v16H6a2 2 0 0 1-2-2zM17 8h3v10a2 2 0 0 1-2 2M8 8h5M8 12h5M8 16h5"/></svg></span>
-<p>Nieuws</p>
-</a>
-<a href="#collectie" class="nav-collectie">
-<span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="6" r="3.2"/><circle cx="12" cy="18" r="3.2"/><circle cx="6.5" cy="9" r="3.2"/><circle cx="17.5" cy="9" r="3.2"/><circle cx="6.5" cy="15" r="3.2"/><circle cx="17.5" cy="15" r="3.2"/></svg></span>
-<p>Collectie</p>
-</a>
-</nav>
+            <div class="kaartjes-grid">
 
-</div>
+                <article class="kaartje">
+                    <img src="assets/images-1.jpeg" alt="Witte dovenetel">
+                    <h2>Witte Dovenetel</h2>
+                    <p class="latijn">Lamium album</p>
+                    <p>Lijkt op brandnetel maar "gaatjes" in de bloem.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="assets/images.jpeg" alt="Duizendblad">
+                    <h3>Duizendblad</h3>
+                    <p class="latijn">Achillea millefolium</p>
+                    <p>Witte schermen die zweefvliegen en sluipwespen aantrekken.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="assets/Grote_Teunisbloem_closeup.jpg" alt="Teunisbloem">
+                    <h3>Teunisbloem</h3>
+                    <p class="latijn">Oenothera biennis</p>
+                    <p>Gaat 's avonds open en wordt bestoven door nachtvlinders.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="assets/images-2.jpeg" alt="Wilde marjolein">
+                    <h3>Wilde Marjolein</h3>
+                    <p class="latijn">Origanum vulgare</p>
+                    <p>Geurige roze bloempjes; een topplant voor vlinders en bijen.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="assets/.jpg" alt="Kaarde">
+                    <h3>Kaarde</h3>
+                    <p class="latijn">Dipsacus fullonum</p>
+                    <p>Stekelige bloemhoofden; putters eten in de winter de zaden.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="assets/.jpg" alt="Goede salie">
+                    <h3>Goede Salie</h3>
+                    <p class="latijn">Salvia officinalis</p>
+                    <p>Paarse lipbloemen waar hommels in kruipen.</p>
+                </article>
+
+            </div>
+
+            <!-- Alle planten -->
+            <h2>Alle planten</h2>
+
+            <div class="kaartjes-grid">
+
+                <article class="kaartje">
+                    <img src="img/Grote_Teunisbloem.jpg" alt="Teunisbloem">
+                    <h3>Teunisbloem</h3>
+                    <p class="latijn">Oenothera biennis</p>
+                    <p>Ecologische rol: Insecten die in de stengels schuilen dienen als voedselbron voor vogels.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="img/duizendblad.jpg" alt="Duizendblad">
+                    <h3>Duizendblad</h3>
+                    <p class="latijn">Achillea millefolium</p>
+                    <p>Ecologische rol: Trekt bijen en vlinders en andere bestuivers aan. Goed voor graslanden en
+                        biodiversiteit.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="img/zuurbes.jpg" alt="Zuurbes">
+                    <h3>Zuurbes</h3>
+                    <p class="latijn">Berberis vulgaris</p>
+                    <p>Ecologische rol: Bessen zijn een belangrijke voedselbron voor vogels.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="img/bijvoet.jpg" alt="Bijvoet">
+                    <h3>Bijvoet</h3>
+                    <p class="latijn">Artemisia vulgaris</p>
+                    <p>Ecologische rol: Voedselplant voor larven van veel vlindersoorten.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="img/colakruid.jpg" alt="Colakruid">
+                    <h3>Colakruid</h3>
+                    <p class="latijn">Artemisia abrotanum</p>
+                    <p>.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="img/kaarde.jpg" alt="Kaarde">
+                    <h3>Kaarde</h3>
+                    <p class="latijn">Dipsacus fullonum</p>
+                    <p>.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="img/stinkende-gouwe.jpg" alt="Stinkende gouwe">
+                    <h3>Stinkende Gouwe</h3>
+                    <p class="latijn">Chelidonium majus</p>
+                    <p>.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="img/valeriaan.jpg" alt="Valeriaan">
+                    <h3>Valeriaan</h3>
+                    <p class="latijn">Valeriana officinalis</p>
+                    <p>.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="img/witte-dovenetel.jpg" alt="Witte dovenetel">
+                    <h3>Witte Dovenetel</h3>
+                    <p class="latijn">Lamium album</p>
+                    <p>.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="img/wilde-marjolein.jpg" alt="Wilde marjolein">
+                    <h3>Wilde Marjolein</h3>
+                    <p class="latijn">Origanum vulgare</p>
+                    <p>.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="img/citroenmelisse.jpg" alt="Citroenmelisse">
+                    <h3>Citroenmelisse</h3>
+                    <p class="latijn">Melissa officinalis</p>
+                    <p>.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="img/moerasspirea.jpg" alt="Moerasspirea">
+                    <h3>Moerasspirea</h3>
+                    <p class="latijn">Filipendula ulmaria</p>
+                    <p>.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="img/goede-salie.jpg" alt="Goede salie">
+                    <h3>Goede Salie</h3>
+                    <p class="latijn">Salvia officinalis</p>
+                    <p>.</p>
+                </article>
+
+                <article class="kaartje">
+                    <img src="img/groot-kaasjeskruid.jpg" alt="Groot kaasjeskruid">
+                    <h3>Groot Kaasjeskruid</h3>
+                    <p class="latijn">Malva sylvestris</p>
+                    <p>.</p>
+                </article>
+
+            </div>
+
+        </main>
+
+
+        <!-- ===== NAVIGATIE ===== -->
+        <nav class="bottom-nav">
+            <a href="home.html">
+                <span><svg viewBox="0 0 24 24">
+                        <path d="M3 11 12 3l9 8v10h-6v-6H9v6H3z" /></svg></span>
+                <p>Home</p>
+            </a>
+            <a href="#kaart" class="nav-kaart">
+                <span><svg viewBox="0 0 24 24">
+                        <path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15M15 6v15" /></svg></span>
+                <p>Veldverkenner</p>
+            </a>
+            <a href="nieuws.html">
+                <span><svg viewBox="0 0 24 24">
+                        <path d="M4 4h13v16H6a2 2 0 0 1-2-2zM17 8h3v10a2 2 0 0 1-2 2M8 8h5M8 12h5M8 16h5" />
+                        </svg></span>
+                <p>Nieuws</p>
+            </a>
+            <a href="#collectie" class="nav-collectie">
+                <span><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="2.5" />
+                        <circle cx="12" cy="6" r="3.2" />
+                        <circle cx="12" cy="18" r="3.2" />
+                        <circle cx="6.5" cy="9" r="3.2" />
+                        <circle cx="17.5" cy="9" r="3.2" />
+                        <circle cx="6.5" cy="15" r="3.2" />
+                        <circle cx="17.5" cy="15" r="3.2" /></svg></span>
+                <p>Collectie</p>
+            </a>
+        </nav>
+
+    </div>
 
 </body>
 
