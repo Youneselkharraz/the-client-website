@@ -1,0 +1,303 @@
+
+
+:root {
+  /* kleuren uit de stijlgids */
+  --groen: #aecea7;
+  --beige: #e5dcbc;
+  --blauw: #aabce0;
+  --goud: #ead28c;
+  --goud-donker: #b58a38;
+  --bruin: #72583c;
+
+  /* afgeleide kleuren */
+  --papier: #f5f1e6;   /* achtergrond, warm wit */
+  --veld: #f1ecd4;     /* kleur van de kaart */
+  --inkt: #3d2f22;     /* donkere tekstkleur */
+  --lijn: #ddd3b6;     /* dunne scheidingslijnen */
+
+  --nav-hoogte: 4.75rem;
+  --rand: 1.25rem;     /* zijmarge op mobiel */
+}
+
+
+
+/* ==========================================================
+   KAART
+   ========================================================== */
+
+/* Het kaartvlak scrolt; de kaart zelf is groter dan het scherm */
+.kaart-binnen {
+  container-type: inline-size;
+  height: 70vh;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  background-color: var(--veld);
+}
+
+/* Titel "Verkennen" blijft bovenaan staan */
+.kaart-binnen::before {
+  content: "Verkennen";
+  position: sticky;
+  top: 1;
+  left: 1;
+  z-index: 1;
+  display: block;
+  padding-block: 0.9rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--bruin);
+  background-color: var(--papier);
+  border-bottom: 1px solid var(--lijn);
+}
+
+/* Liggende plattegrond rechtop draaien.
+   100cqw = de breedte van .kaart-binnen */
+.kaart-draai {
+  --b: 100cqw;
+  position: relative;
+  width: var(--b);
+  height: calc(var(--b) * 3.328); /* verhouding van bloemenveld.jpg */
+}
+
+.kaart-draai img {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: calc(var(--b) * 3.328);
+  height: var(--b);
+  max-width: none;
+  transform-origin: top left;
+  transform: rotate(90deg) translateY(-100%);
+}
+
+/* ==========================================================
+   COLLECTIE
+   ========================================================== */
+.collectie-pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem var(--rand) calc(var(--nav-hoogte) + 2rem);
+  background-color: var(--papier);
+  border-top: 4px solid var(--groen);
+}
+
+.terug {
+  align-self: flex-start;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--bruin);
+  text-decoration: underline;
+  text-decoration-color: var(--goud);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.3em;
+}
+
+.terug:hover,
+.terug:focus-visible {
+  text-decoration-color: var(--bruin);
+}
+
+.collectie-pagina h1 {
+  margin-top: 1rem;
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--bruin);
+}
+
+.intro {
+  max-width: 34ch;
+  color: var(--bruin);
+}
+
+/* Kopje "Alle planten" met een lijn ernaast (flexbox) */
+.collectie-pagina > h2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--goud-donker);
+}
+
+.collectie-pagina > h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--lijn);
+}
+
+/* ---------- Plantkaartjes ----------
+   Geen losse blokken met schaduw, maar een lijst met lijnen,
+   zoals in een veldgids. De indeling gaat met grid-template-areas. */
+.kaartjes-grid {
+  display: grid;
+  gap: 0 2rem;
+  margin-top: 0.75rem;
+}
+
+.kaartje {
+  display: grid;
+  grid-template-columns: 1fr 6.5rem;
+  grid-template-areas:
+    "naam   foto"
+    "latijn foto"
+    "tekst  foto";
+  grid-template-rows: auto auto 1fr;
+  column-gap: 1rem;
+  padding-block: 1.25rem;
+  border-bottom: 1px solid var(--lijn);
+}
+
+
+.kaartje h3 {
+  grid-area: naam;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--bruin);
+}
+
+.kaartje .latijn {
+  grid-area: latijn;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--goud-donker);
+}
+
+.kaartje p:not(.latijn) {
+  grid-area: tekst;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Foto rechts, iets gedraaid als een vastgeplakt fotootje */
+.kaartje img {
+  grid-area: foto;
+  align-self: start;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 0.3rem solid #fff;
+  border-radius: 0.25rem;
+  background-color: var(--beige);
+  rotate: 2deg;
+  transition: rotate 0.3s ease;
+  font-size: 0.7rem; /* tekst als de foto ontbreekt */
+}
+
+.kaartje:nth-child(even) img {
+  rotate: -2deg;
+}
+
+.kaartje:hover img {
+  rotate: 0deg;
+}
+
+/* ==========================================================
+   NAVIGATIE
+   ========================================================== */
+.bottom-nav {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.6rem 0 calc(0.6rem + env(safe-area-inset-bottom));
+  background-color: #fff;
+  border-top: 1px solid var(--lijn);
+}
+
+.bottom-nav a {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #8f877a;
+}
+
+.bottom-nav p {
+  margin: 0;
+}
+
+.bottom-nav span,
+.nav-collectie::before {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.bottom-nav svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+}
+
+
+/* ==========================================================
+   GROTE SCHERMEN
+   https://developer.mozilla.org/en-US/docs/Web/CSS/@media
+   ========================================================== */
+@media (min-width: 56rem) {
+  :root {
+    --rand: max(2rem, calc((100vw - 72rem) / 2));
+  }
+
+  /* Kaart liggend en helemaal zichtbaar */
+  .kaart-binnen {
+    height: auto;
+    overflow: visible;
+    padding: 0 var(--rand) 3rem;
+  }
+
+  .kaart-binnen::before {
+    position: static;
+    padding-block: 2rem 1.25rem;
+    font-size: 2.25rem;
+    text-align: left;
+    background: none;
+    border: 0;
+  }
+
+  .kaart-draai {
+    width: 100%;
+    height: auto;
+  }
+
+  .kaart-draai img {
+    position: static;
+    width: 100%;
+    height: auto;
+    transform: none;
+  }
+
+  .collectie-pagina {
+    padding-top: 3rem;
+  }
+
+  /* Kaartjes in kolommen; auto-fill bepaalt zelf hoeveel er passen */
+  .kaartjes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
+
+  .bottom-nav {
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .bottom-nav a {
+    flex: 0 0 auto;
+  }
+}
+
+
