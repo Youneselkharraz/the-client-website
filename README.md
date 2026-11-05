@@ -47,7 +47,6 @@ Bezoekers scannen een QR-code en kunnen direct aan de slag, zonder in te loggen.
 
 - [MDN Web Docs](https://developer.mozilla.org/)
 - [OpenStreetMap](https://www.openstreetmap.org/#map=19/52.351615/4.931402&layers=D) voor de paden
-- KML-bestand met de contouren van het veld, gemaakt door de opdrachtgever in Google Earth
 - [Montserrat via Google Fonts](https://fonts.google.com/specimen/Montserrat)
 
 ## Licentie
